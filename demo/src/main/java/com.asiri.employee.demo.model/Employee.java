@@ -46,11 +46,11 @@ public class Employee {
         this.firstName = firstName;
     }
 
-    public String getlName() {
+    public String getLastNameName() {
         return lastName;
     }
 
-    public void setlName(String lName) {
+    public void setLastNameName(String lName) {
         this.lastName = lName;
     }
 
