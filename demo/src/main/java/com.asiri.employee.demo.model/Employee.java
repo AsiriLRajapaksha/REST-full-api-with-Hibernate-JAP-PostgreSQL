@@ -1,9 +1,34 @@
-public class Employee{
+package com.asiri.employee.demo.model;
 
+import javax.persistence.*;
+
+@Entity
+@Table(name = "employees")
+public class Employee {
+
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long id;
+
+    @Column(name = "first_name")
     private String firstName;
+
+    @Column(name = "last_name")
     private String lastName;
+
+    @Column(name = "email")
     private String email;
+
+    public Employee() {
+        super();
+    }
+
+    public Employee(String firstName, String lastName, String email) {
+        super();
+        this.firstName = firstName;
+        this.lastName = lastName;
+        this.email = email;
+    }
 
     public long getId() {
         return id;
@@ -14,19 +39,19 @@ public class Employee{
     }
 
     public String getfirstName() {
-        return fName;
+        return firstName;
     }
 
     public void setfirstName(String firstName) {
-        this.fName = fName;
+        this.firstName = firstName;
     }
 
     public String getlName() {
-        return lName;
+        return lastName;
     }
 
     public void setlName(String lName) {
-        this.lName = lName;
+        this.lastName = lName;
     }
 
     public String getEmail() {
@@ -36,5 +61,4 @@ public class Employee{
     public void setEmail(String email) {
         this.email = email;
     }
-
 }
