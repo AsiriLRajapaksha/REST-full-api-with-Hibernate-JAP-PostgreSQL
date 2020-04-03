@@ -1,4 +1,4 @@
-package com.asiri.employee.repository;
+package com.asiri.employee.demo.repository;
 
 import com.asiri.employee.demo.model.Employee;
 import org.springframework.data.jpa.repository.JpaRepository;

@@ -46,12 +46,12 @@ public class Employee {
         this.firstName = firstName;
     }
 
-    public String getLastNameName() {
+    public String getLastName() {
         return lastName;
     }
 
-    public void setLastNameName(String lName) {
-        this.lastName = lName;
+    public void setLastName(String lastName) {
+        this.lastName = lastName;
     }
 
     public String getEmail() {

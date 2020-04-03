@@ -1,4 +1,4 @@
-package com.asiri.employee.exception;
+package com.asiri.employee.demo.exception;
 
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.ResponseStatus;

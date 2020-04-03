@@ -1,9 +1,9 @@
 package com.asiri.employee.demo.controller;
 
 import com.asiri.employee.demo.model.Employee;
-import com.asiri.employee.exception.ResourceNotFoundException;
-import com.asiri.employee.repository.EmployeeRepository;
-import jdk.management.resource.ResourceRequestDeniedException;
+import com.asiri.employee.demo.exception.ResourceNotFoundException;
+import com.asiri.employee.demo.repository.EmployeeRepository;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
@@ -16,7 +16,8 @@ import java.util.Map;
 @RequestMapping("/api/v1/")
 public class EmployeeController {
 
-    private EmployeeRepository employeeRepository;
+    @Autowired
+    public EmployeeRepository employeeRepository;
 
     // get all employee
     @GetMapping("employees")
@@ -50,7 +51,7 @@ public class EmployeeController {
 
         employee.setEmail(employeeDetails.getEmail());
         employee.setfirstName(employeeDetails.getfirstName());
-        employee.setLastNameName(employeeDetails.getLastNameName());
+        employee.setLastName(employeeDetails.getLastName());
 
         return ResponseEntity.ok(this.employeeRepository.save(employee));
     }
